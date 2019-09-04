@@ -13,7 +13,7 @@
     // self 也要遵守 <WKScriptMessageHandler> 代理并执行其代理方法
     //- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message;
     
-    _wkWeakProxyDelegate = [[GTWKWebViewWeakProxyDelegate alloc]initWithDelegate:self];
+    _wkWeakProxyDelegate = [[SYWKWebViewWeakProxyDelegate alloc]initWithDelegate:self];
     
     WKUserContentController *userContent = [[WKUserContentController alloc] init];
     [userContent addScriptMessageHandler:_wkWeakProxyDelegate name:@"JS方法名"];
